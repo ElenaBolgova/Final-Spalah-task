@@ -124,17 +124,18 @@ nav ul li a:hover {
 
 .button-main-style.get-modal-call,
 .in-touch button {
-    padding: 8px 39px 7px 44px;
+    width: 100%;
+    padding: 8px 20px 7px 20px;
 }
 
 .button-main-style.get-modal-more {
-    width: 43%;
     padding: 14px 20px 12px 20px;
     font-size: 24px;
 }
 
 .button-main-style {
-    padding: 16px 127px 14px 127px;
+    width: 43%;
+    padding: 16px 20px 14px 20px;
     border-radius: 3px;
     border: none;
     box-shadow: 0 3px 0 0 #fa9f14;
@@ -209,7 +210,7 @@ nav ul li a:hover {
 
 .modal-inner form button {
     margin-top: 15px;
-    padding: 13px 50px 11px 50px;
+    padding: 13px 20px 11px 20px;
     width: 55%;
 }
 
@@ -416,7 +417,7 @@ h2 {
 }
 
 .radio-container {
-    display: block;
+    display: flex;
     position: relative;
     padding: 0 25px 0 25px;
     cursor: pointer;
@@ -487,9 +488,13 @@ input,
     padding: 29px 0;
 }
 
+.line:last-of-type label {
+    width: 45%;
+}
+
 .line:last-of-type input {
     position: static;
-    width: 300px;
+    width: 100%;
     padding: 7px 15px;
 }
 
@@ -563,6 +568,7 @@ input,
     display: flex;
     flex-direction: column;
     width: 33%;
+    margin: 0 10px;
     font-size: 18px;
 }
 
@@ -578,7 +584,7 @@ input,
     box-shadow: 0 0 0 4px #fcb816;
 }
 
-.income ul li img {
+.circle img {
     position: relative;
     top: 20%;
 }
@@ -611,16 +617,20 @@ input,
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 490px;
+    max-width: 490px;
     padding: 25px;
     margin: 12px auto;
     background: #f6af21;
     border: 1px solid #f8c358;
 }
 
+.in-touch form label {
+    width: 100%;
+}
+
 .in-touch form input,
 .in-touch form textarea {
-    width: 430px;
+    width: 100%;
     margin: 0 0 6px;
     padding: 12px 14px;
     border: none;
@@ -720,7 +730,7 @@ footer .phone-area a {
         left: 143px;
         color: #000;
         font-size: 45px;
-        z-index: 102;
+        z-index: 100;
     }
 
     .burger:hover {
@@ -780,7 +790,7 @@ footer .phone-area a {
 @media (max-width: 850px) {
 
     .wrapper div.wrapper-inner {
-        padding: 50px 0 55px;
+        padding: 50px 15px 55px;
     }
 
     .wrapper footer .wrapper-inner {
@@ -818,19 +828,42 @@ footer .phone-area a {
         padding: 25px 33px;
     }
 
-    .wrapper-calculate-area .line {
+    .line {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
     }
 
-    .wrapper-calculate-area .line ul,
-    .wrapper-calculate-area .line input {
+    .line ul,
+    .line input {
         position: static;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
-    .wrapper-calculate-area .line ul li {
+    .line p {
+        margin-bottom: 20px;
+    }
 
+    .line input {
+        margin-top: 15px;
+    }
+
+    .line:last-of-type span {
+        align-self: center;
+        margin-top: 15px;
+    }
+
+    .advantages .wrapper-inner li,
+    .income .wrapper-inner li {
+        font-size: 1em;
+    }
+
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .circle img {
+        top: 10%;
     }
 
 }
@@ -861,6 +894,65 @@ footer .phone-area a {
         font-size: 20px;
     }
 
+    .advantages .wrapper-inner ul {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .advantages .wrapper-inner ul li {
+        width: 33%;
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 630px) {
+
+    .modal {
+        justify-content: flex-start;
+    }
+
+    .modal-inner {
+        max-width: 100%;
+    }
+
+    .modal-inner h3 {
+        padding: 0 20px;
+    }
+
+    .close-modal {
+        top: 0;
+        right: 10px;
+        font-size: 30px;
+        color: #fcb816;
+    }
+
+    .close-modal:hover {
+        color: #000;
+    }
+
+    .income .wrapper-inner ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .income .wrapper-inner ul li {
+        margin-top: 20px;
+        width: 47%;
+    }
+
+}
+
+@media (max-width: 570px) {
+
+    .line ul {
+        flex-wrap: wrap;
+    }
+
+    .line ul li {
+        flex-wrap: wrap;
+    }
+
 }
 
 @media (max-width: 537px) {
@@ -882,6 +974,48 @@ footer .phone-area a {
     h2 {
         font-size: 1.3em;
         margin-bottom: 15px;
+    }
+
+    .line:last-of-type {
+        flex-direction: column;
+    }
+
+    .line:last-of-type label {
+        width: 100%;
+    }
+
+    .calculate-area button {
+        width: 70%;
+        padding: 8px 15px 6px;
+    }
+
+    .in-touch div.wrapper-inner {
+        padding: 30px 0 35px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .modal-inner form input {
+        width: 100%;
+    }
+
+    .modal-inner form button {
+        width: 70%;
+    }
+
+    .modal-inner h3 {
+        font-size: 1em;
+    }
+
+    .modal-inner h3 span {
+        font-size: 2em;
+        line-height: 1;
+    }
+
+    .income .wrapper-inner ul li {
+        width: 90%;
     }
 
 }
