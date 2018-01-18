@@ -34,6 +34,18 @@ ul {
     list-style-type: none;
 }
 
+input:focus,
+button:focus,
+textarea:focus {
+    border: none;
+    outline: none;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
 /************** HEADER **************/
 
 header[role="banner"] {
@@ -44,11 +56,12 @@ header .wrapper-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0 10px;
+    padding: 10px 0 15px;
 }
 
 .logo {
     position: relative;
+    margin-top: 10px;
 }
 
 .logo span {
@@ -68,10 +81,11 @@ nav ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    margin-top: 15px;
 }
 
 nav ul li a {
-    margin: 0 10px;
+    margin: 0 15px;
     text-transform: uppercase;
     cursor: pointer;
     transition: .4s;
@@ -92,7 +106,7 @@ nav ul li a:hover {
     top: 7px;
     left: 0;
     color: #f09907;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .phone-area a {
@@ -108,8 +122,17 @@ nav ul li a:hover {
     color: #f09907;
 }
 
+.button-main-style.get-modal-call {
+    padding: 8px 39px 7px 44px;
+}
+
+.button-main-style.get-modal-more {
+    padding: 14px 100px 12px 100px;
+    font-size: 24px;
+}
+
 .button-main-style {
-    padding: 14px 39px 12px 44px;
+    padding: 16px 127px 14px 127px;
     border-radius: 3px;
     border: none;
     box-shadow: 0 3px 0 0 #fa9f14;
@@ -117,6 +140,7 @@ nav ul li a:hover {
     text-transform: uppercase;
     color: #fff;
     background: #fcb816;
+    transition: .4s;
 }
 
 .button-main-style:hover {
@@ -144,19 +168,23 @@ nav ul li a:hover {
 
 .top-section .wrapper-inner {
     position: relative;
-    padding: 110px 30px 100px;
+    padding: 125px 0 130px;
+}
+
+.top-section p {
+    padding: 0 0 0 40px;
 }
 
 .top-section p,
 .top-section p span {
-    line-height: 1.4;
+    line-height: 1.5;
     font-size: 36px;
     color: #fff;
 }
 
 .top-section p span {
     display: block;
-    padding-bottom: 50px;
+    padding-bottom: 65px;
     text-transform: uppercase;
     color: #fcb816;
 }
@@ -181,12 +209,12 @@ nav ul li a:hover {
 }
 
 .steps .wrapper-inner {
-    padding: 80px 0;
+    padding: 70px 0 80px;
 }
 
 h2 {
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 45px;
     text-transform: uppercase;
     font-size: 36px;
 }
@@ -235,7 +263,134 @@ h2 {
 
 /************** SECTION - CALCULATE **************/
 
+.calculate .wrapper-inner {
+    padding: 71px 0 84px;
+    text-align: center;
+}
 
+.wrapper-calculate-area {
+    width: 818px;
+    padding: 50px 67px;
+    margin: 0 auto;
+    border: 1px solid #fcb816;
+    border-radius: 3px;
+}
+
+.line {
+    position: relative;
+    display: flex;
+    padding: 16px 0;
+    text-align: left;
+}
+
+.line:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #f3f3f3;
+}
+
+.line:first-of-type {
+    padding: 0 0 16px;
+}
+
+.line:first-of-type:after {
+    background: transparent;
+}
+
+.line ul,
+.line input {
+    position: absolute;
+    left: 210px;
+    display: flex;
+}
+
+.line input {
+    top: 9px;
+}
+
+.radio-container {
+    display: block;
+    position: relative;
+    padding: 0 30px 0 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 1px solid #d3d3d3;
+    background-color: #fff;
+}
+
+.radio-container:hover input ~ .radio-mark {
+    background-color: rgba(211, 211, 211, .3);
+}
+
+.radio-container input:checked ~ .radio-mark {
+    background-color: #fff;
+}
+
+.radio-mark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.radio-container input:checked ~ .radio-mark:after {
+    display: block;
+}
+
+.radio-container .radio-mark:after {
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fcb816;
+}
+
+input,
+.calculate-area p,
+.calculate-area li label {
+    font-weight: 400;
+}
+
+.calculate-area input {
+    padding: 6px 15px;
+    border-radius: 3px;
+    border: 1px solid #c8c8c8;
+}
+
+.line:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 29px 0;
+}
+
+.line:last-of-type input {
+    position: static;
+    width: 300px;
+}
+
+.line:last-of-type span {
+    color: #fcb816;
+}
 
 /************** SECTION - ADVANTAGES **************/
 
@@ -257,7 +412,7 @@ h2 {
 }
 
 .advantages .wrapper-inner {
-    padding: 80px 0;
+    padding: 70px 0;
 }
 
 .advantages ul {
@@ -370,7 +525,7 @@ h2 {
 
 footer[role="contentinfo"] {
     background: #000;
-    padding: 30px 0;
+    padding: 25px 0 30px;
 }
 
 footer .wrapper-inner {
@@ -385,9 +540,9 @@ footer .wrapper-inner {
 
 .social-icons a {
     display: block;
-    width: 42px;
-    height: 42px;
-    line-height: 46px;
+    width: 44px;
+    height: 44px;
+    line-height: 52px;
     text-align: center;
     margin: 0 5px;
     border-radius: 50%;
@@ -395,8 +550,12 @@ footer .wrapper-inner {
 }
 
 .social-icons .fa {
-    font-size: 24px;
+    font-size: 27px;
     color: #000;
+}
+
+.social-icons .fa:hover {
+    background: #ffc02a;
 }
 
 .copyright {

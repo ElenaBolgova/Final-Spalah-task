@@ -70,66 +70,129 @@
 
                     <ul>
 
-                        <li>
+                        <li class="line">
                             <p>Выберите этажность дома</p>
                             <ul>
-                                <li><label><input type="radio" name="stage" value="<5">до 5 этажей</label></li>
-                                <li><label><input type="radio" name="stage" value="9-14">9-14 этажей</label></li>
-                                <li><label><input type="radio" name="stage" value=">16">16 и более этажей</label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="stage" value="<5">до 5 этажей
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="stage" value="9-14">9-14 этажей
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="stage" value=">16">16 и более этажей
+                                    <span class="radio-mark"></span>
+                                </label></li>
                             </ul>
                         </li>
 
-                        <li>
-                            <label><input type="text">Выберите свой этаж</label>
+                        <li class="line">
+                            <label>Выберите свой этаж
+                                <input type="text" name="your-stage">
+                            </label>
                         </li>
 
-                        <li>
-                            <label><input type="text" placeholder="м2" required>Введите метраж</label>
+                        <li class="line">
+                            <label>Введите метраж
+                                <input type="text" placeholder="м2" name="square" required>
+                            </label>
                         </li>
 
-                        <li>
+                        <li class="line">
                             <p>Количество комнат</p>
                             <ul>
-                                <li><label><input type="radio" name="room" value="1">1</label></li>
-                                <li><label><input type="radio" name="room" value="2">2</label></li>
-                                <li><label><input type="radio" name="room" value="3">3</label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="room" value="1">1
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="room" value="2">2
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="room" value="3">3
+                                    <span class="radio-mark"></span>
+                                </label></li>
                             </ul>
                         </li>
 
-                        <li>
+                        <li class="line">
                             <p>Удаленность от метро:</p>
                             <ul>
-                                <li><label><input type="radio" name="transfer" value="afoot">пешком</label></li>
-                                <li><label><input type="radio" name="transfer" value="transport">транспортом</label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="transfer" value="afoot">пешком
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="transfer" value="transport">транспортом
+                                    <span class="radio-mark"></span>
+                                </label></li>
                             </ul>
                             <ul>
-                                <li><label><input type="radio" name="remoteness" value="<5">до 5 минут</label></li>
-                                <li><label><input type="radio" name="remoteness" value="5-10">5-10 минут</label></li>
-                                <li><label><input type="radio" name="remoteness" value="<10">до 10 минут</label></li>
-                                <li><label><input type="radio" name="remoteness" value="10-15">10-15 минут</label></li>
-                                <li><label><input type="radio" name="remoteness" value=">15">больше 15 минут</label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="remoteness" value="<5">до 5 минут
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="remoteness" value="5-10">5-10 минут
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="remoteness" value="<10">до 10 минут
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="remoteness" value="10-15">10-15 минут
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="remoteness" value=">15">больше 15 минут
+                                    <span class="radio-mark"></span>
+                                </label></li>
                             </ul>
                         </li>
 
-                        <li>
+                        <li class="line">
                             <p>Тип ремонта</p>
                             <ul>
-                                <li><label><input type="radio" name="repair" value="aged">бабушкин</label></li>
-                                <li><label><input type="radio" name="repair" value="economy">эконом</label></li>
-                                <li><label><input type="radio" name="repair" value="premium">премиум</label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="repair" value="aged">бабушкин
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="repair" value="economy">эконом
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="repair" value="premium">премиум
+                                    <span class="radio-mark"></span>
+                                </label></li>
                             </ul>
                             <ul>
-                                <li><label><input type="radio" name="correction" value="rebuilding">требует капитальный ремонт</label></li>
-                                <li><label><input type="radio" name="correction" value="redecorating">требует косметический ремонт</label></li>
-                                <li><label><input type="radio" name="correction" value="brand-new">не требует </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="correction" value="rebuilding">требует капитальный ремонт
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="correction" value="redecorating">требует косметический ремонт
+                                    <span class="radio-mark"></span>
+                                </label></li>
+                                <li><label class="radio-container">
+                                    <input type="radio" name="correction" value="brand-new">не требует
+                                    <span class="radio-mark"></span>
+                                </label></li>
                             </ul>
                         </li>
 
-                        <li>
-                            <label><input type="text" placeholder="руб." required>За сколько сейчас сдается?</label>
+                        <li class="line">
+                            <label>За сколько сейчас сдается?
+                                <input type="text" placeholder="руб." required>
+                            </label>
                         </li>
 
-                        <li>
+                        <li class="line">
                             <label><input type="email" placeholder="Ваш e-mail"></label>
                             <span>ИЛИ</span>
                             <label><input type="tel" placeholder="Ваш телефон"></label>
@@ -197,10 +260,10 @@
         <div class="wrapper-inner">
 
             <ul class="social-icons">
-                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
                 <li><a href="#"><i class="fa fa-vk"></i></a></li>
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
             </ul>
 
             <div class="copyright">Все права защищены © 2017</div>
