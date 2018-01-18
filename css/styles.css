@@ -128,7 +128,8 @@ nav ul li a:hover {
 }
 
 .button-main-style.get-modal-more {
-    padding: 14px 100px 12px 100px;
+    width: 43%;
+    padding: 14px 20px 12px 20px;
     font-size: 24px;
 }
 
@@ -155,6 +156,10 @@ nav ul li a:hover {
     background: linear-gradient(to bottom, #fa9f14, #ffc02a);
     text-shadow: 0 -1px 1px rgba(255, 255, 255, .7);
     color: #bf7004;
+}
+
+.burger {
+    display: none;
 }
 
 /************** MODAL **************/
@@ -303,7 +308,7 @@ h3 span {
 
 h2 {
     position: relative;
-    padding-bottom: 45px;
+    margin-bottom: 45px;
     text-transform: uppercase;
     font-size: 36px;
 }
@@ -580,14 +585,17 @@ input,
 
 /************** SECTION - IN-TOUCH **************/
 
-.in-touch {
+.in-touch .wrapper-inner {
     padding: 70px 0 65px;
+}
+
+.in-touch {
     text-align: center;
     background: #f29f00;
 }
 
 .in-touch h2 {
-    padding-bottom: 0;
+    margin-bottom: 0;
     font-style: italic;
     text-transform: none;
     color: #fff;
@@ -650,13 +658,13 @@ input,
 
 footer[role="contentinfo"] {
     background: #000;
-    padding: 25px 0 30px;
 }
 
 footer .wrapper-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 25px 0 30px;
 }
 
 .social-icons {
@@ -690,4 +698,190 @@ footer .wrapper-inner {
 
 footer .phone-area a {
     color: #fff;
+}
+
+/***** MEDIA *****/
+
+@media (max-width: 1012px) {
+
+    div.wrapper-inner {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+}
+
+@media (max-width: 977px) {
+
+    .burger {
+        display: block;
+        position: absolute;
+        top: -15px;
+        left: 143px;
+        color: #000;
+        font-size: 45px;
+        z-index: 102;
+    }
+
+    .burger:hover {
+        color: #fcb816;
+    }
+
+    nav {
+        position: absolute;
+        top: 45px;
+        left: 0;
+        right: 0;
+    }
+
+    nav ul {
+        display: block;
+        width: 100%;
+        height: calc(100vh - 81px);
+        position: fixed;
+        left: 0;
+        bottom: -150%;
+        background: #fff;
+        z-index: 101;
+        padding: 25px 0;
+        transition: .6s;
+    }
+
+    nav ul.active {
+        bottom: 0;
+    }
+
+    nav li {
+        display: block;
+        padding: 5px 15px;
+        text-align: center;
+    }
+
+    .top-section .wrapper-inner {
+        padding: 80px 0 85px;
+    }
+
+    .top-section p {
+        font-size: 2em;
+    }
+
+    .top-section p span {
+        font-size: 1em;
+        padding-bottom: 35px;
+    }
+
+    .button-main-style.get-modal-more {
+        padding: 10px 20px 8px 20px;
+        font-size: 1.4em;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .wrapper div.wrapper-inner {
+        padding: 50px 0 55px;
+    }
+
+    .wrapper footer .wrapper-inner {
+        padding: 15px 0 20px;
+    }
+
+    .top-section p {
+        line-height: 1.2;
+        padding: 0;
+        font-size: 1.5em;
+    }
+
+    .top-section p span {
+        line-height: 1.2;
+        font-size: 1em;
+        padding-bottom: 25px;
+    }
+
+    .button-main-style.get-modal-more {
+        padding: 10px 20px 8px 20px;
+        font-size: 1.3em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 25px;
+    }
+
+    .steps ul li {
+        font-size: 1em;
+    }
+
+    .wrapper-calculate-area {
+        width: 95%;
+        padding: 25px 33px;
+    }
+
+    .wrapper-calculate-area .line {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .wrapper-calculate-area .line ul,
+    .wrapper-calculate-area .line input {
+        position: static;
+        justify-content: center;
+    }
+
+    .wrapper-calculate-area .line ul li {
+
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .steps ul {
+        flex-direction: column;
+    }
+
+    .steps ul li {
+        padding: 20px 0 0 95px;
+        text-align: left;
+    }
+
+    .steps ul li:after {
+        width: 0;
+        height: 0;
+        background: transparent;
+    }
+
+    .steps ul li::before {
+        top: 30%;
+        left: 50px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 537px) {
+
+    .button-main-style.get-modal-more {
+        width: 70%;
+        padding: 8px 15px 6px 15px;
+    }
+
+    .steps ul li {
+        padding: 20px 0 0 60px;
+    }
+
+    .steps ul li::before {
+        top: 30%;
+        left: 15px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+
 }

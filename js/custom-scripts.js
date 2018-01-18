@@ -34,9 +34,9 @@ $(window).ready(function() {
 
     ///// BURGER /////
 
-    /*$('.burger').click(function() {
+    $('.burger').click(function() {
         $(this).toggleClass('fa-close fa-bars');
-        $('.menu').toggleClass('active');
-    });*/
+        $('nav ul').toggleClass('active');
+    });
 
 });
