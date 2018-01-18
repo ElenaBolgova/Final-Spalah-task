@@ -641,6 +641,7 @@ input,
 .in-touch form textarea {
     min-height: 93px;
     margin: 0 0 10px;
+    resize: none;
 }
 
 .in-touch form .button-main-style {
@@ -768,7 +769,7 @@ footer .phone-area a {
     }
 
     .top-section .wrapper-inner {
-        padding: 80px 0 85px;
+        padding: 80px 15px 85px;
     }
 
     .top-section p {
@@ -794,7 +795,7 @@ footer .phone-area a {
     }
 
     .wrapper footer .wrapper-inner {
-        padding: 15px 0 20px;
+        padding: 15px 20px 20px;
     }
 
     .top-section p {
@@ -904,6 +905,26 @@ footer .phone-area a {
         margin-top: 20px;
     }
 
+    footer .wrapper-inner {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    footer .phone-area {
+        order: 2;
+    }
+
+    .social-icons {
+        order: 1;
+    }
+
+    .copyright {
+        order: 3;
+        width: 100%;
+        margin-top: 20px;
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 630px) {
@@ -990,7 +1011,20 @@ footer .phone-area a {
     }
 
     .in-touch div.wrapper-inner {
-        padding: 30px 0 35px;
+        padding: 30px 15px 35px;
+    }
+
+}
+
+@media (max-width: 485px) {
+
+    footer .phone-area {
+        order: 1;
+        margin: 0 0 20px 0;
+    }
+
+    ul.social-icons {
+        order: 2;
     }
 
 }
