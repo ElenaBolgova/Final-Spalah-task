@@ -122,7 +122,8 @@ nav ul li a:hover {
     color: #f09907;
 }
 
-.button-main-style.get-modal-call {
+.button-main-style.get-modal-call,
+.in-touch button {
     padding: 8px 39px 7px 44px;
 }
 
@@ -140,14 +141,107 @@ nav ul li a:hover {
     text-transform: uppercase;
     color: #fff;
     background: #fcb816;
-    transition: .4s;
 }
 
 .button-main-style:hover {
-    background: #ffc02a;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+                inset 0 -1px 1px rgba(255, 255, 255, 0.25),
+                0 3px 0 0 #fa9f14;
+    background: linear-gradient(to bottom, #ffc02a, #fa9f14);
+}
+
+.button-main-style:active {
+    box-shadow: 0 2px 0 0 #fa9f14;
+    background: linear-gradient(to bottom, #fa9f14, #ffc02a);
+    text-shadow: 0 -1px 1px rgba(255, 255, 255, .7);
+    color: #bf7004;
+}
+
+/************** MODAL **************/
+
+.modal-call,
+.modal-more {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 101;
+}
+
+.modal-inner {
+    position: relative;
+    width: 535px;
+    padding: 20px 17px 40px 30px;
+    background: #fff;
+    border: 1px solid #fcb816;
+    border-radius: 3px;
+}
+
+.modal-inner form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-inner form label {
+    width: 100%;
+    text-align: center;
+}
+
+.modal-inner form input {
+    width: 90%;
+    padding: 12px 14px 11px 14px;
+    margin-bottom: 9px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+}
+
+.modal-inner form button {
+    margin-top: 15px;
+    padding: 13px 50px 11px 50px;
+    width: 55%;
+}
+
+.close-modal {
+    position: absolute;
+    top: -50px;
+    right: -40px;
+    font-size: 40px;
+    color: #7f6015;
+    transition: .4s;
+}
+
+.close-modal:hover {
+    color: #fcb816;
+    cursor: pointer;
+}
+
+h3 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fcb816;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+h3 span {
+    color: #000;
+    font-size: 36px;
 }
 
 /************** TOP SECTION **************/
+
+.top-section .wrapper-inner {
+    position: relative;
+    padding: 125px 0 130px;
+}
 
 .top-section {
     position: relative;
@@ -164,11 +258,6 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     background: rgba(1, 1, 1, .7);
-}
-
-.top-section .wrapper-inner {
-    position: relative;
-    padding: 125px 0 130px;
 }
 
 .top-section p {
@@ -191,6 +280,10 @@ nav ul li a:hover {
 
 /************** SECTION - STEPS **************/
 
+.steps .wrapper-inner {
+    padding: 70px 0 80px;
+}
+
 .steps {
     position: relative;
     background: url('../images/background-steps.png') no-repeat center top;
@@ -206,10 +299,6 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, .7);
-}
-
-.steps .wrapper-inner {
-    padding: 70px 0 80px;
 }
 
 h2 {
@@ -279,6 +368,7 @@ h2 {
 .line {
     position: relative;
     display: flex;
+    flex-direction: column;
     padding: 16px 0;
     text-align: left;
 }
@@ -304,18 +394,26 @@ h2 {
 .line ul,
 .line input {
     position: absolute;
-    left: 210px;
+    left: 230px;
     display: flex;
 }
 
 .line input {
-    top: 9px;
+    top: 14px;
+}
+
+.line ul:nth-of-type(2) {
+    position: static;
+}
+
+.line:nth-of-type(5) ul:last-of-type label {
+    padding: 0 20px 0 25px;
 }
 
 .radio-container {
     display: block;
     position: relative;
-    padding: 0 30px 0 25px;
+    padding: 0 25px 0 25px;
     cursor: pointer;
     user-select: none;
 }
@@ -371,13 +469,14 @@ input,
 }
 
 .calculate-area input {
-    padding: 6px 15px;
+    padding: 2px 15px;
     border-radius: 3px;
     border: 1px solid #c8c8c8;
 }
 
 .line:last-of-type {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 29px 0;
@@ -386,6 +485,7 @@ input,
 .line:last-of-type input {
     position: static;
     width: 300px;
+    padding: 7px 15px;
 }
 
 .line:last-of-type span {
@@ -393,6 +493,10 @@ input,
 }
 
 /************** SECTION - ADVANTAGES **************/
+
+.advantages .wrapper-inner {
+    padding: 70px 0 75px;
+}
 
 .advantages {
     position: relative;
@@ -411,15 +515,12 @@ input,
     background: rgba(255, 255, 255, .7);
 }
 
-.advantages .wrapper-inner {
-    padding: 70px 0;
-}
-
 .advantages ul {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    margin-top: 10px;
 }
 
 .advantages ul li {
@@ -443,27 +544,29 @@ input,
 /************** SECTION - INCOME **************/
 
 .income .wrapper-inner {
-    padding: 70px 0 65px;
+    padding: 60px 0 65px;
     text-align: center;
 }
 
 .income ul {
     display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
 }
 
 .income ul li {
     display: flex;
     flex-direction: column;
-    margin: 0 30px;
-    width: 30%;
+    width: 33%;
+    font-size: 18px;
 }
 
 .circle {
     position: relative;
     margin-bottom: 20px;
     align-self: center;
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     background: #fcb816;
     border: 2px solid #fdd77c;
@@ -472,13 +575,13 @@ input,
 
 .income ul li img {
     position: relative;
-    top: 15%;
+    top: 20%;
 }
 
 /************** SECTION - IN-TOUCH **************/
 
 .in-touch {
-    padding: 75px 0;
+    padding: 70px 0 65px;
     text-align: center;
     background: #f29f00;
 }
@@ -486,6 +589,7 @@ input,
 .in-touch h2 {
     padding-bottom: 0;
     font-style: italic;
+    text-transform: none;
     color: #fff;
 }
 
@@ -501,7 +605,7 @@ input,
     align-items: center;
     width: 490px;
     padding: 25px;
-    margin: 10px auto;
+    margin: 12px auto;
     background: #f6af21;
     border: 1px solid #f8c358;
 }
@@ -510,15 +614,36 @@ input,
 .in-touch form textarea {
     width: 430px;
     margin: 0 0 6px;
-    padding: 17px 14px;
+    padding: 12px 14px;
     border: none;
+    color: #a0a0a0;
+    font-weight: 400;
+}
+
+.in-touch form textarea {
+    min-height: 93px;
+    margin: 0 0 10px;
 }
 
 .in-touch form .button-main-style {
-    width: 50%;
+    width: 55%;
     color: #000;
     background: #eeeeee;
     box-shadow: 0 3px 0 0 #e0e0e0;
+}
+
+.in-touch form .button-main-style:hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+                inset 0 -1px 1px rgba(255, 255, 255, 0.25),
+                0 3px 0 0 #e0e0e0;
+    background: linear-gradient(to bottom, #eeeeee, #e0e0e0);
+}
+
+.in-touch form .button-main-style:active {
+    box-shadow: 0 2px 0 0 #e0e0e0;
+    background: linear-gradient(to bottom, #e0e0e0, #eeeeee);
+    text-shadow: 0 -1px 1px rgba(255, 255, 255, 1);
+    color: darkgrey;
 }
 
 /************** FOOTER **************/
