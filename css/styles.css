@@ -19,6 +19,7 @@
     position: relative;
     display: block;
     width: 100%;
+    opacity: 0;
     min-height: 100vh;
     min-width: 320px;
     overflow: hidden;
@@ -48,8 +49,19 @@ textarea:focus::-webkit-input-placeholder {
 
 /************** HEADER **************/
 
+.wrapper {
+    padding: 104px 0 0;
+}
+
 header[role="banner"] {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
     background: #fff;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .5);
+    z-index: 99;
 }
 
 header .wrapper-inner {
@@ -102,16 +114,17 @@ nav ul li a:hover {
 }
 
 .fa-phone {
-    position: absolute;
-    top: 7px;
-    left: 0;
     color: #f09907;
     font-size: 22px;
 }
 
+.phone-number {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 .phone-area a {
     margin-bottom: 10px;
-    padding-left: 20px;
     text-decoration: none;
     color: #000;
     font-size: 24px;
@@ -143,6 +156,7 @@ nav ul li a:hover {
     text-transform: uppercase;
     color: #fff;
     background: #fcb816;
+    cursor: pointer;
 }
 
 .button-main-style:hover {
@@ -251,9 +265,10 @@ h3 span {
 
 .top-section {
     position: relative;
-    background: url('../images/top_background.png') no-repeat center top;
+    background: url('../images/top-background.jpg') no-repeat center top;
     background-size: cover;
     text-align: center;
+    z-index: 2;
 }
 
 .top-section:before {
@@ -292,19 +307,9 @@ h3 span {
 
 .steps {
     position: relative;
-    background: url('../images/background-steps.png') no-repeat center top;
+    background: url('../images/background-steps.jpg') no-repeat center top;
     background-size: cover;
     text-align: center;
-}
-
-.steps:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, .7);
 }
 
 h2 {
@@ -312,6 +317,16 @@ h2 {
     margin-bottom: 45px;
     text-transform: uppercase;
     font-size: 36px;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 100px;
+    height: 2px;
+    background: #fcb816;
 }
 
 .steps ul {
@@ -510,19 +525,9 @@ input,
 
 .advantages {
     position: relative;
-    background: url('../images/background-steps.png') no-repeat center top;
+    background: url('../images/background-steps.jpg') no-repeat center top;
     background-size: cover;
     text-align: center;
-}
-
-.advantages:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, .7);
 }
 
 .advantages ul {
@@ -605,6 +610,10 @@ input,
     font-style: italic;
     text-transform: none;
     color: #fff;
+}
+
+.in-touch h2:after {
+    background: transparent;
 }
 
 .in-touch span {
@@ -926,6 +935,14 @@ footer .phone-area a {
     }
 
 }
+
+/*@media (max-width: 700px) {
+
+    h2:before {
+        left: 40%;
+    }
+
+}*/
 
 @media (max-width: 630px) {
 
