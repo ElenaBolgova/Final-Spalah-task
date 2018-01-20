@@ -1,10 +1,40 @@
 $(window).ready(function() {
 
-    ///// Плавная загрузка страницы /////
+    ///// SMOOTH PAGE LOADING /////
 
     setTimeout(function () {
         $('.wrapper').animate({opacity: 1}, 500);
     }, 300);
+
+    ///// BURGER /////
+
+    $('.burger').click(function() {
+        $(this).toggleClass('fa-close fa-bars');
+        $('nav ul').toggleClass('active');
+    });
+
+    ///// PHONE-NUMBER MOVEMENT /////
+
+    if($(window).width() <= 768) {
+        $('header .phone-number').appendTo('nav ul');
+    }
+
+    $(window).resize(function() {
+        if($(window).width() <= 768) {
+            $('header .phone-number').appendTo('nav ul');
+        } else {
+            $('nav .phone-number').prependTo('header .phone-area');
+        }
+    });
+
+    ///// SMOOTH SCROLL TO ANCHOR /////
+
+    $("nav").on("click", "a", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top - $('header').height()}, 700);
+    });
 
     ///// MODAL CALL /////
 
@@ -37,41 +67,5 @@ $(window).ready(function() {
             $('.modal-more').fadeOut(400);
         }
     });
-
-    ///// BURGER /////
-
-    $('.burger').click(function() {
-        $(this).toggleClass('fa-close fa-bars');
-        $('nav ul').toggleClass('active');
-    });
-
-    ///// PHONE-NUMBER MOVEMENT /////
-
-    if($(window).width() <= 977) {
-        $('header .phone-number').appendTo('nav ul');
-    }
-
-    $(window).resize(function() {
-        if($(window).width() <= 977) {
-            $('header .phone-number').appendTo('nav ul');
-        } else {
-            $('nav .phone-number').prependTo('header .phone-area');
-        }
-    });
-
-    /*/!*----------- Плавный скролл для якоря ----------------*!/
-
-    $("nav").on("click", "a", function (event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 500);
-    });
-
-    /!*--------------- Плавный скролл наверх ----------------*!/
-
-    $(".up").on("click", function () {
-        $('body,html').animate({scrollTop: 0}, 500);
-    });*/
 
 });

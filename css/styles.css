@@ -99,6 +99,8 @@ nav ul {
 nav ul li a {
     margin: 0 15px;
     text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
     cursor: pointer;
     transition: .4s;
 }
@@ -123,7 +125,7 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-.phone-area a {
+.phone-number a {
     margin-bottom: 10px;
     text-decoration: none;
     color: #000;
@@ -131,7 +133,7 @@ nav ul li a:hover {
     transition: .4s;
 }
 
-.phone-area a:hover {
+.phone-number a:hover {
     color: #f09907;
 }
 
@@ -147,7 +149,7 @@ nav ul li a:hover {
 }
 
 .button-main-style {
-    width: 43%;
+    width: 50%;
     padding: 16px 20px 14px 20px;
     border-radius: 3px;
     border: none;
@@ -268,7 +270,6 @@ h3 span {
     background: url('../images/top-background.jpg') no-repeat center top;
     background-size: cover;
     text-align: center;
-    z-index: 2;
 }
 
 .top-section:before {
@@ -722,7 +723,7 @@ footer .phone-area a {
 
 /***** MEDIA *****/
 
-@media (max-width: 1012px) {
+@media (max-width: 1200px) {
 
     div.wrapper-inner {
         padding-right: 15px;
@@ -731,7 +732,7 @@ footer .phone-area a {
 
 }
 
-@media (max-width: 977px) {
+@media (max-width: 992px) {
 
     .burger {
         display: block;
@@ -757,7 +758,7 @@ footer .phone-area a {
     nav ul {
         display: block;
         width: 100%;
-        height: calc(100vh - 81px);
+        height: calc(100vh - 91px);
         position: fixed;
         left: 0;
         bottom: -150%;
@@ -775,6 +776,20 @@ footer .phone-area a {
         display: block;
         padding: 5px 15px;
         text-align: center;
+    }
+
+    header .phone-area {
+        flex-direction: row;
+        align-items: baseline;
+    }
+
+    header .phone-number {
+        width: 255px;
+        text-align: left;
+    }
+
+    header .button-main-style.get-modal-call {
+        width: 50%;
     }
 
     .top-section .wrapper-inner {
@@ -801,6 +816,10 @@ footer .phone-area a {
 
     .wrapper div.wrapper-inner {
         padding: 50px 15px 55px;
+    }
+
+    .wrapper header .wrapper-inner {
+        padding: 10px 15px 15px;
     }
 
     .wrapper footer .wrapper-inner {
@@ -878,14 +897,23 @@ footer .phone-area a {
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
+
+    header .button-main-style.get-modal-call {
+        width: 100%;
+    }
+
+    header .phone-number {
+        width: auto;
+        text-align: center;
+    }
 
     .steps ul {
         flex-direction: column;
     }
 
     .steps ul li {
-        padding: 20px 0 0 95px;
+        padding: 35px 0 0 105px;
         text-align: left;
     }
 
@@ -896,7 +924,7 @@ footer .phone-area a {
     }
 
     .steps ul li::before {
-        top: 30%;
+        top: 47%;
         left: 50px;
         width: 36px;
         height: 36px;
@@ -936,18 +964,18 @@ footer .phone-area a {
 
 }
 
-/*@media (max-width: 700px) {
+@media (max-width: 700px) {
 
-    h2:before {
+    h2:after {
         left: 40%;
     }
 
-}*/
+}
 
 @media (max-width: 630px) {
 
     .modal {
-        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .modal-inner {
@@ -981,7 +1009,12 @@ footer .phone-area a {
 
 }
 
-@media (max-width: 570px) {
+@media (max-width: 580px) {
+
+    .button-main-style.get-modal-more {
+        width: 60%;
+        padding: 8px 15px 6px 15px;
+    }
 
     .line ul {
         flex-wrap: wrap;
@@ -993,20 +1026,14 @@ footer .phone-area a {
 
 }
 
-@media (max-width: 537px) {
-
-    .button-main-style.get-modal-more {
-        width: 70%;
-        padding: 8px 15px 6px 15px;
-    }
+@media (max-width: 540px) {
 
     .steps ul li {
-        padding: 20px 0 0 60px;
+        padding: 35px 0 0 75px;
     }
 
     .steps ul li::before {
-        top: 30%;
-        left: 15px;
+        left: 20px;
     }
 
     h2 {
@@ -1016,6 +1043,7 @@ footer .phone-area a {
 
     .line:last-of-type {
         flex-direction: column;
+        padding: 0 0 15px;
     }
 
     .line:last-of-type label {
@@ -1044,9 +1072,34 @@ footer .phone-area a {
         order: 2;
     }
 
+    h2:after {
+        left: 37%;
+    }
+
 }
 
 @media (max-width: 400px) {
+
+    .wrapper {
+        padding: 55px 0 0;
+    }
+
+    nav ul {
+        height: calc(100vh - 55px);
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .burger {
+        top: -35px;
+        left: 80%;
+    }
+
+    header .phone-area {
+        justify-content: flex-end;
+    }
 
     .modal-inner form input {
         width: 100%;
