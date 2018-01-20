@@ -391,7 +391,7 @@ h2:after {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 16px 0;
+    padding: 17px 0;
     text-align: left;
 }
 
@@ -421,11 +421,24 @@ h2:after {
 }
 
 .line input {
-    top: 14px;
+    top: 15px;
+}
+
+.line input.your-stage {
+    width: 50px;
+}
+
+.line input.square {
+    width: 105px;
+}
+
+.line input.price {
+    width: 150px;
 }
 
 .line ul:nth-of-type(2) {
     position: static;
+    margin: -5px 0 0;
 }
 
 .line:nth-of-type(5) ul:last-of-type label {
@@ -435,9 +448,13 @@ h2:after {
 .radio-container {
     display: flex;
     position: relative;
-    padding: 0 25px 0 25px;
+    padding: 0 25px;
     cursor: pointer;
     user-select: none;
+}
+
+.line ul li:last-of-type .radio-container {
+    padding-right: 0;
 }
 
 .radio-container input {
@@ -511,7 +528,7 @@ input,
 .line:last-of-type input {
     position: static;
     width: 100%;
-    padding: 7px 15px;
+    padding: 9px 15px;
 }
 
 .line:last-of-type span {
@@ -970,11 +987,20 @@ footer .phone-area a {
         left: 40%;
     }
 
+    .line ul {
+        flex-wrap: wrap;
+    }
+
+    .line ul li {
+        flex-wrap: wrap;
+    }
+
 }
 
 @media (max-width: 630px) {
 
-    .modal {
+    .modal-call,
+    .modal-more {
         align-items: flex-start;
     }
 
@@ -1014,14 +1040,6 @@ footer .phone-area a {
     .button-main-style.get-modal-more {
         width: 60%;
         padding: 8px 15px 6px 15px;
-    }
-
-    .line ul {
-        flex-wrap: wrap;
-    }
-
-    .line ul li {
-        flex-wrap: wrap;
     }
 
 }
@@ -1119,6 +1137,14 @@ footer .phone-area a {
     }
 
     .income .wrapper-inner ul li {
+        width: 90%;
+    }
+
+    .line:nth-of-type(6) ul:nth-of-type(2) li {
+        margin-bottom: 10px;
+    }
+
+    .button-main-style.get-modal-more {
         width: 90%;
     }
 
