@@ -46,11 +46,11 @@
                             Отправьте заявку и мы свяжемся с Вами в ближайшее время</h3>
 
                         <label>
-                            <input type="text" placeholder="Вашу имя" name="name" required>
+                            <input type="text" placeholder="Ваше имя" name="name" required>
                         </label>
 
                         <label>
-                            <input type="tel" placeholder="Ваш телефон" name="tel" required>
+                            <input type="tel" placeholder="Ваш телефон" name="telephone" required>
                         </label>
 
                         <button type="submit" class="button-main-style">Отправить</button>
@@ -83,11 +83,11 @@
                             Отправьте заявку и мы свяжемся с Вами в ближайшее время</h3>
 
                         <label>
-                            <input type="text" placeholder="Вашу имя" name="name" required>
+                            <input type="text" placeholder="Ваше имя" name="name" required>
                         </label>
 
                         <label>
-                            <input type="tel" placeholder="Ваш телефон" name="tel" required>
+                            <input type="tel" placeholder="Ваш телефон" name="telephone" required>
                         </label>
 
                         <label>
@@ -129,7 +129,7 @@
             <h2>Экспресс оценка Вашей выгоды</h2>
 
             <div class="wrapper-calculate-area">
-                <form class="calculate-area" action="#">
+                <form action="#" class="calculate-area" >
 
                     <ul>
 
@@ -159,7 +159,8 @@
 
                         <li class="line">
                             <label>Введите метраж
-                                <input type="text" placeholder="м2" name="square" class="square" required>
+                                <input type="text" name="square" class="square" required>
+                                <span class="square-unit">м<sup>2</sup></span>
                             </label>
                         </li>
 
@@ -251,14 +252,19 @@
 
                         <li class="line">
                             <label>За сколько сейчас сдается?
-                                <input type="text" placeholder="руб." name="price" class="price" required>
+                                <input type="text" name="price" class="price" required>
+                                <span class="price-unit">руб.</span>
                             </label>
                         </li>
 
                         <li class="line">
-                            <label><input type="email" placeholder="Ваш e-mail"></label>
+                            <label>
+                                <input type="email" placeholder="Ваш e-mail" name="email">
+                            </label>
                             <span>ИЛИ</span>
-                            <label><input type="tel" placeholder="Ваш телефон"></label>
+                            <label>
+                                <input type="tel" placeholder="Ваш телефон" name="telephone">
+                            </label>
                         </li>
 
                     </ul>
@@ -277,10 +283,10 @@
             <h2>Наши преимущества</h2>
 
             <ul>
-                <li><img src="images/advantage-1.png">100% - рабочая бизнес-модель</li>
-                <li><img src="images/advantage-2.png">Окупаемость проекта 11 месяцев</li>
-                <li><img src="images/advantage-3.png">Бесплатные консультации и помощь в пересдаче квартиры в течении года</li>
-                <li><img src="images/advantage-4.png">Дополнительно: уборка, текущий ремонт, правовое и налоговое консультирование</li>
+                <li><img src="images/advantage-1.png" alt="picture">100% - рабочая бизнес-модель</li>
+                <li><img src="images/advantage-2.png" alt="picture">Окупаемость проекта 11 месяцев</li>
+                <li><img src="images/advantage-3.png" alt="picture">Бесплатные консультации и помощь в пересдаче квартиры в течении года</li>
+                <li><img src="images/advantage-4.png" alt="picture">Дополнительно: уборка, текущий ремонт, правовое и налоговое консультирование</li>
             </ul>
 
         </div>
@@ -292,9 +298,18 @@
             <h2>Вы получите стабильный и высокий доход</h2>
 
             <ul>
-                <li><div class="circle"><img src="images/income-guarantee.png"></div>Гарантированная сдача объекта в аренду по договору</li>
-                <li><div class="circle"><img src="images/income-continuous.png"></div>Найдем адекватных арендаторов на длительный срок</li>
-                <li><div class="circle"><img src="images/income-comfort.png"></div>Вашим арендаторам будет на столько удобно,что им не захочется уезжать</li>
+                <li>
+                    <div class="circle"><img src="images/income-guarantee.png" alt="picture"></div>
+                    Гарантированная сдача объекта в аренду по договору
+                </li>
+                <li>
+                    <div class="circle"><img src="images/income-continuous.png" alt="picture"></div>
+                    Найдем адекватных арендаторов на длительный срок
+                </li>
+                <li>
+                    <div class="circle"><img src="images/income-comfort.png" alt="picture"></div>
+                    Вашим арендаторам будет на столько удобно,что им не захочется уезжать
+                </li>
             </ul>
 
         </div>
@@ -307,11 +322,17 @@
 
             <span>Отправьте заявку и мы свяжемся с Вами в ближайшее время</span>
 
-            <form>
+            <form action="#">
 
-                <label><input type="text" placeholder="Ваше имя" required></label>
-                <label><input type="tel" placeholder="Ваш телефон" required></label>
-                <label><textarea placeholder="Сообщение" required></textarea></label>
+                <label>
+                    <input type="text" placeholder="Ваше имя" name="name" required>
+                </label>
+                <label>
+                    <input type="tel" placeholder="Ваш телефон" name="telephone" required>
+                </label>
+                <label>
+                    <textarea placeholder="Сообщение" name="request" maxlength="1000" required></textarea>
+                </label>
                 <button class="button-main-style" type="submit">Отправить</button>
 
             </form>

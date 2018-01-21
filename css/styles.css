@@ -179,7 +179,7 @@ nav ul li a:hover {
     display: none;
 }
 
-/************** MODAL **************/
+/************** MODAL WINDOWS **************/
 
 .modal-call,
 .modal-more {
@@ -428,12 +428,33 @@ h2:after {
     width: 50px;
 }
 
+.square-unit {
+    position: absolute;
+    top: 18px;
+    left: 300px;
+    font-weight: 400;
+}
+
+.square-unit sup {
+    font-size: 10px;
+    font-weight: 400;
+}
+
 .line input.square {
     width: 105px;
+    padding: 2px 40px 2px 15px;
 }
 
 .line input.price {
     width: 150px;
+    padding: 2px 55px 2px 15px;
+}
+
+.price-unit {
+    position: absolute;
+    top: 18px;
+    left: 330px;
+    font-weight: 400;
 }
 
 .line ul:nth-of-type(2) {
@@ -543,7 +564,7 @@ input,
 
 .advantages {
     position: relative;
-    background: url('../images/background-steps.jpg') no-repeat center top;
+    background: url('../images/background-advantages.jpg') no-repeat center top;
     background-size: cover;
     text-align: center;
 }
@@ -725,8 +746,8 @@ footer .wrapper-inner {
     color: #000;
 }
 
-.social-icons .fa:hover {
-    background: #ffc02a;
+.social-icons a:hover {
+    background-color: #f6a90c;
 }
 
 .copyright {
@@ -896,6 +917,16 @@ footer .phone-area a {
     .line:last-of-type span {
         align-self: center;
         margin-top: 15px;
+    }
+
+    .square-unit {
+        top: 55px;
+        left: 70px;
+    }
+
+    .price-unit {
+        top: 55px;
+        left: 100px;
     }
 
     .advantages .wrapper-inner li,
