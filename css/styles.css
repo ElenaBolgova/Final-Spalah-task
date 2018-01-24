@@ -652,7 +652,7 @@ input,
 }
 
 .in-touch h2:after {
-    background: transparent;
+    display: none;
 }
 
 .in-touch span {
@@ -818,12 +818,13 @@ footer .phone-area a {
 
     header .phone-area {
         flex-direction: row;
-        align-items: baseline;
+        align-items: center;
     }
 
     header .phone-number {
         width: 255px;
         text-align: left;
+        margin-bottom: 0;
     }
 
     header .button-main-style.get-modal-call {
@@ -1015,7 +1016,7 @@ footer .phone-area a {
 @media (max-width: 700px) {
 
     h2:after {
-        left: 40%;
+        display: none;
     }
 
     .line ul {
@@ -1036,6 +1037,7 @@ footer .phone-area a {
     }
 
     .modal-inner {
+        top: 80px;
         max-width: 100%;
     }
 
@@ -1119,10 +1121,6 @@ footer .phone-area a {
 
     ul.social-icons {
         order: 2;
-    }
-
-    h2:after {
-        left: 37%;
     }
 
 }

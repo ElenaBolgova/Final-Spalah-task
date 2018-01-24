@@ -36,7 +36,7 @@ $(window).ready(function() {
         $('body,html').animate({scrollTop: top - $('header').height()}, 700);
     });
 
-    ///// MODAL CALL /////
+    ///// MODAL WINDOW 'CALL' /////
 
     $('.get-modal-call').click(function () {
         $('.modal-call').fadeIn(400).css('display', 'flex');
@@ -52,7 +52,7 @@ $(window).ready(function() {
         }
     });
 
-    ///// MODAL MORE /////
+    ///// MODAL WINDOW 'MORE' /////
 
     $('.get-modal-more').click(function () {
         $('.modal-more').fadeIn(400).css('display', 'flex');
