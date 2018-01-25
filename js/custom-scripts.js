@@ -13,6 +13,10 @@ $(window).ready(function() {
         $('nav ul').toggleClass('active');
     });
 
+    while($('nav ul').hasClass('active')) {
+        $('.wrapper').css('height', '100%');
+    }
+
     ///// PHONE-NUMBER MOVEMENT /////
 
     if($(window).width() <= 768) {

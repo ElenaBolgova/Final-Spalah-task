@@ -796,10 +796,10 @@ footer .phone-area a {
     nav ul {
         display: block;
         width: 100%;
-        height: calc(100vh - 91px);
+        height: calc(100% - 70px);
         position: fixed;
-        left: 0;
-        bottom: -150%;
+        top: 70px;
+        left: -150%;
         background: #fff;
         z-index: 101;
         padding: 25px 0;
@@ -807,7 +807,7 @@ footer .phone-area a {
     }
 
     nav ul.active {
-        bottom: 0;
+        left: 0;
     }
 
     nav li {
@@ -1132,7 +1132,8 @@ footer .phone-area a {
     }
 
     nav ul {
-        height: calc(100vh - 55px);
+        height: calc(100vh - 45px);
+        top: 45px;
     }
 
     .logo {
