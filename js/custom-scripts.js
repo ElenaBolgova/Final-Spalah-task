@@ -38,6 +38,10 @@ $(window).ready(function() {
         var id = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top - $('header').height()}, 700);
+        if($(window).width() < 993) {
+            $('nav ul').removeClass('active');
+            $('.burger').removeClass('.fa-close');
+        }
     });
 
     ///// MODAL WINDOW 'CALL' /////
