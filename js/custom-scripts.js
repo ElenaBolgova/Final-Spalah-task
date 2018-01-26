@@ -40,7 +40,7 @@ $(window).ready(function() {
         $('body,html').animate({scrollTop: top - $('header').height()}, 700);
         if($(window).width() < 993) {
             $('nav ul').removeClass('active');
-            $('.burger').removeClass('.fa-close');
+            $('.burger').toggleClass('fa-close fa-bars');
         }
     });
 
